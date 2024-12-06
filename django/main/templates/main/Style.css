@@ -9,5 +9,11 @@ body{
 :root {
   --bulma-primary-h: 211deg;
   --bulma-primary-l: 49%;
+  --bulma-link-h: 207deg;
+  --bulma-link-s: 86%;
+  --bulma-link-l: 49%;
 }
 
+.image-border {
+    border: 6px solid dodgerblue;
+}
