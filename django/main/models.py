@@ -8,3 +8,6 @@ class Illness(models.Model):
             'name',
         ]
         verbose_name_plural = 'Illnesses'
+
+    def __str__(self):
+        return self.name
