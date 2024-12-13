@@ -4,9 +4,18 @@ from django.shortcuts import render
 
 from django.shortcuts import render
 
+from .models import Illness
+
 
 def home(request):
-    return render(request, 'main/Home.html')
+
+    illnesses = Illness.objects.all()
+
+    context = {
+        'illnesses' : illnesses,
+    }
+
+    return render(request, 'main/Home.html', context)
 
 
 def physical_injury(request):
