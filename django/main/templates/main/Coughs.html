@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Coughs</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Style.css' %}">
 </head>
 <body>
-$END$
+    <div class="container">
+        <div class="notification is-primary">
+            <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
+        </div>
+        <h2 class="is-size-3 has-text-weight-bold">Coughs</h2>
+        <p>
+            A page dedicated into providing basic, general information about how to find the solution to your health
+            problem/s.
+        </p>
+        <br>
+        <p>(place holder text;)Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consectetur, delectus est ex iure libero natus, nihil odio repellendus tempore tenetur! Aliquid amet ea numquam placeat, quo sequi vitae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam beatae debitis ipsa labore maiores minima minus, molestias, nisi nostrum numquam obcaecati pariatur quia quibusdam quos rerum sed sint tempore voluptate.</p>
+        <br>
+        <br><br>
+        <h2 class="is-size-3 has-text-weight-bold">What's the problem?</h2>
+        <p>
+            Please select one of the following health problems to find the cause, your remedy, and possible preventions to your problem/s:
+        </p>
+        <br>
+        <div class="fixed-grid">
+            <div class="grid">
+                <a class="cell1 notification is-link has-text-centered is-size-5" href="{% url 'Physical_Injury' %}">Physical Injury</a>
+                <a class="cell2 notification is-link has-text-centered is-size-5" href="{% url 'Gastric_Problems' %}">Gastric Problems</a>
+                <a class="cell3 notification is-link has-text-centered is-size-5" href="{% url 'Pain_Relief' %}">Pain Relief</a>
+                <a class="cell4 notification is-link has-text-centered is-size-5" href="{% url 'NauseaVomiting' %}">Nausea/Vomiting</a>
+                <a class="cell5 notification is-link has-text-centered is-size-5" href="{% url 'DiarrhoeaConstipation' %}">Diarrhoea/Constipation</a>
+                <a class="cell6 notification is-link has-text-centered is-size-5" href="{% url 'home' %}">Back Home</a>
+              <br>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
