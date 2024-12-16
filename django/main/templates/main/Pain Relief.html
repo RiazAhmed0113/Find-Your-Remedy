@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gastric Problems</title>
+    <title>Pain Relief</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'Style.css' %}">
 </head>
@@ -11,7 +11,7 @@
         <div class="notification is-primary">
             <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
         </div>
-        <h2 class="is-size-3 has-text-weight-bold">Gastric Problems</h2>
+        <h2 class="is-size-3 has-text-weight-bold">Pain Relief</h2>
         <p>
             A page dedicated into providing basic, general information about how to find the solution to your health
             problem/s.
@@ -28,9 +28,13 @@
         <br>
         <div class="fixed-grid">
             <div class="grid">
-                <a class="cell1 notification is-link has-text-centered is-size-5" href="{% url 'Physical_Injury' %}">Physical Injury</a>
-                <a class="cell2 notification is-link has-text-centered is-size-5" href="{% url 'Coughs' %}">Coughs</a>
-                <a class="cell3 notification is-link has-text-centered is-size-5" href="{% url 'Pain_Relief' %}">Pain Relief</a>
+                 {% for illness in illnesses %}
+                    <a class="cell1 notification is-link has-text-centered is-size-5" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
+                 {% endfor %}
+
+                <a class="cell1 notification is-link has-text-centered is-size-5" href="{% url 'Physical Injury' %}">Physical Injury</a>
+                <a class="cell2 notification is-link has-text-centered is-size-5" href="{% url 'Gastric Problems' %}">Gastric Problems</a>
+                <a class="cell3 notification is-link has-text-centered is-size-5" href="{% url 'Coughs' %}">Coughs</a>
                 <a class="cell4 notification is-link has-text-centered is-size-5" href="{% url 'NauseaVomiting' %}">Nausea/Vomiting</a>
                 <a class="cell5 notification is-link has-text-centered is-size-5" href="{% url 'DiarrhoeaConstipation' %}">Diarrhoea/Constipation</a>
                 <a class="cell6 notification is-link has-text-centered is-size-5" href="{% url 'home' %}">Back Home</a>
