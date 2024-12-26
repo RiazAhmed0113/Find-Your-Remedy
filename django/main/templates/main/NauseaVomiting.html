@@ -8,6 +8,29 @@
 </head>
 <body>
     <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{% url 'home' %}">
+                    <h1 class="is-size-5 has-text-left has-text-weight-bold"><u>Find Your Remedy</u></h1>
+                </a>
+
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Problems
+                    </a>
+
+                    <div class="navbar-dropdown">
+
+                        {% for illness in illnesses %}
+                        <a class="navbar-item" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
+                        {% endfor %}
+
+                    </div>
+                </div>
+
+            </div>
+        </nav>
         <div class="notification is-primary">
             <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
         </div>
@@ -32,11 +55,14 @@
                  {% endfor %}
                 <br>
             </div>
+
+            <div class="columns is-centered">
+                <div class="column is-full">
+                    <a class="button is-size-4 is-primary is-fullwidth" href="{% url 'home' %}">Back Home</a>
+                </div>
+            </div>
         </div>
 
-        <div class="notification is-primary">
-            <a class="is-link has-text-centered" href="{% url 'home' %}">Back Home</a>
-        </div>
     </div>
 </body>
 </html>

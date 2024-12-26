@@ -8,6 +8,29 @@
 </head>
 <body>
     <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="{% url 'home' %}">
+                    <h1 class="is-size-5 has-text-left has-text-weight-bold"><u>Find Your Remedy</u></h1>
+                </a>
+
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Problems
+                    </a>
+
+                    <div class="navbar-dropdown">
+
+                        {% for illness in illnesses %}
+                        <a class="navbar-item" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
+                        {% endfor %}
+
+                    </div>
+                </div>
+
+            </div>
+        </nav>
         <div class="notification is-primary">
             <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
         </div>
@@ -30,9 +53,13 @@
                  {% for illness in illnesses %}
                     <a class="cell1 notification is-link has-text-centered is-size-5" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
                  {% endfor %}
+                <br>
+            </div>
 
-                <a class="cell6 notification is-link has-text-centered is-size-5" href="{% url 'home' %}">Back Home</a>
-              <br>
+            <div class="columns is-centered">
+                <div class="column is-full">
+                    <a class="button is-size-4 is-primary has-text-white is-fullwidth" href="{% url 'home' %}">Back Home</a>
+                </div>
             </div>
         </div>
     </div>
