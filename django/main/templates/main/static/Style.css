@@ -7,9 +7,10 @@ body{
 }
 
 :root {
+  --bulma-primary-h: 210deg;
+  --bulma-primary-l: 54%;
   --bulma-link-h: 207deg;
-  --bulma-link-s: 86%;
-  --bulma-link-l: 49%;
+  --bulma-link-l: 58%;
   --bulma-danger-h: 0deg;
   --bulma-danger-l: 36%;
 }
