@@ -15,6 +15,14 @@ https://www.omnigel.com/blogs/joint-pain-relief-gel-the-ideal-solution-for-busy-
 
 https://www.nurofen.co.uk/pain-advice/adult/pain-relief-patches-and-gels/ 
 
+https://www.amazon.co.uk/Dioralyte-Supplement-Replacement-Sachets-Blackcurrant/dp/B001E4CZ4U
+
+https://www.imodium.com/anti-diarrhea-medicine/ad-diarrhea-oral-solution-caplets
+
+https://www.rennie.co.uk/product-range/rennie-peppermint
+
+https://www.mypharmacy.co.uk/product/gaviscon-advance-peppermint-suspension-300ml/
+
 # Information:
 https://www.nhs.uk/
 # Toolkit used:
