@@ -9,66 +9,69 @@
         .navbar-brand .navbar-item h2 {
             margin-left: 0; /* Ensure text is aligned to the left */
         }
+
     </style>
 </head>
 <body>
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="{% url 'home' %}">
-                    <h1 class="is-size-5 has-text-left has-text-weight-bold title-white"><u>Find Your Remedy</u></h1>
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{% url 'home' %}">
+                <h1 class="is-size-5 has-text-left has-text-weight-bold title-white"><u>Find Your Remedy</u></h1>
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Problems
                 </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Problems
-                    </a>
-                    <div class="navbar-dropdown">
-                        {% for illness in illnesses %}
-                        <a class="navbar-item" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
-                        {% endfor %}
-                    </div>
+                <div class="navbar-dropdown">
+                    {% for illness in illnesses %}
+                    <a class="navbar-item" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
+                    {% endfor %}
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <div class="container">
-        <div class="notification is-primary" style="margin-top: 3.25rem;">
-            <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
-        </div>
-        <h2 class="is-size-3 has-text-weight-bold">What's it about?</h2>
-        <br>
-        <p>
-            A page dedicated into providing basic, general information about how to find the solution to your health
-            problem/s.
-        </p>
-        <br>
-        <p>
-            I aim to provide the most common problems that anyone can face from time to time. This webpage has the ability to
-            add further information in the future but for now I narrowed it down to 6 common topics involving someone's health.
-        </p>
-        <hr>
-        <figure class="image is-1080x1080">
-            <img class="is-rounded image-border" src="{% static '/images/home_pic1.jpg' %}" alt="Stethoscope"/>
-        </figure>
-        <hr>
-        <h2 class="is-size-3 has-text-weight-bold">What's the problem?</h2>
-        <br>
-        <p>
-            Please select one of the following health problems to find the cause, your remedy, and possible preventions to
-            your problem/s:
-        </p>
-        <br>
-        <br>
-        <div class="fixed-grid">
-            <div class="grid">
-                {% for illness in illnesses %}
-                <a class="cell1 notification is-link has-text-centered is-size-5"
-                   href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
-                {% endfor %}
-                <br>
-            </div>
+<div class="container">
+    <div class="notification is-primary" style="margin-top: 3.25rem;">
+        <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
+    </div>
+    <h2 class="is-size-3 has-text-weight-bold">What's it about?</h2>
+    <br>
+    <p>
+        A page dedicated into providing basic, general information about how to find the solution to your health
+        problem/s.
+    </p>
+    <br>
+    <p>
+        I aim to provide the most common problems that anyone can face from time to time. This webpage has the ability
+        to
+        add further information in the future but for now I narrowed it down to 6 common topics involving someone's
+        health.
+    </p>
+    <hr>
+    <figure class="image is-1080x1080">
+        <img class="is-rounded image-border" src="{% static '/images/home_pic1.jpg' %}" alt="Stethoscope"/>
+    </figure>
+    <hr>
+    <h2 class="is-size-3 has-text-weight-bold">What's the problem?</h2>
+    <br>
+    <p>
+        Please select one of the following health problems to find the cause, your remedy, and possible preventions to
+        your problem/s:
+    </p>
+    <br>
+    <br>
+    <div class="fixed-grid">
+        <div class="grid">
+            {% for illness in illnesses %}
+            <a class="cell1 notification is-link has-text-centered is-size-5"
+               href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
+            {% endfor %}
+            <br>
         </div>
     </div>
+</div>
 </body>
 </html>

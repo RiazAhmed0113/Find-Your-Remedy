@@ -8,243 +8,248 @@
     <link rel="stylesheet" href="{% static 'Shapes.css' %}">
 </head>
 <body>
-    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="{% url 'home' %}">
-                    <h1 class="is-size-5 has-text-left has-text-weight-bold title-white"><u>Find Your Remedy</u></h1>
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Problems
-                    </a>
-                    <div class="navbar-dropdown">
-                        {% for illness in illnesses %}
-                        <a class="navbar-item" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
-        <div class="notification is-primary" style="margin-top: 3.25rem;">
-            <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
-        </div>
-        <h2 class="is-size-3 has-text-weight-bold"><u>Coughs</u></h2>
-        <br>
-        <p>
-            A cough is a common reflex action that can clear the throat of any mucus or foreign irritants.
-            while it can be bothersome and annoying, it serves a protective function by helping to keep your throat and
-            air ways clear.
-        </p>
-
-        <hr>
-        <figure class="image is-1080x1080">
-            <img src="{% static '/images/Cough.png' %}" alt="coughing image"/>
-        </figure>
-        <hr>
-
-        <p>
-            A cough will most likely clear up on its own within 3 to 4 weeks.
-        </p>
-        <br>
-        <h4 class="is-size-4 has-text-weight-bold">
-            How you can treat a cough yourself:
-        </h4>
-        <br>
-        <p>
-            There's usually no need to see a GP if you have a cough.
-            <br><br>
-            You should:
-            <br>
-        </p>
-        <div class="content">
-            <ul>
-                <li>rest</li>
-                <li>drink plenty of fluids (water)</li>
-                <li>try ro stay indoors and avoid contact with others if you have a high temperature, or you do not feel
-                well enough to do your normal activities</li>
-            </ul>
-        </div>
-
-        <p>
-            You should also try remedies such as:
-        </p>
-        <div class="content">
-            <ul>
-                <li>paracetamol or ibuprofen to treat any pain or discomfort</li>
-                <li>hot lemon and honey (not suitable for babies under 1-year-old)</li>
-                <li>a herbal medicine called pelargonium (suitable for aged 12 or over)</li>
-            </ul>
-        </div>
-        <p>
-            But there's limited evidence to show these work. Hot lemon with honey has a similar effect to cough medicines.
-        </p>
-
-        <hr>
-        <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-                <button class="button has-text-weight-bold" aria-haspopup="true" aria-controls="dropdown-menu3">
-                    <span>How to make a hot lemon and honey drink</span>
-                    <span class="icon is-small">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                <div class="dropdown-content">
-                    <div class="dropdown-item">
-                        <div class="content">
-                            <ol>
-                                <li>Squeeze half a lemon into a mug of boiled water.</li>
-                                <li>Add 1 to 2 teaspoons of honey.</li>
-                                <li>Drink while still warm (do not give hot drinks to small children).</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="container1">
-            <div class="flex-container">
-                <div class="rectangle"></div>
-                <p>Some medicines and herbal treatments are not safe for everyone (for example, if you're pregnant).
-                Always check with leaflet or speak to a pharmacist before taking them.</p>
-            </div>
-        </div>
-        <hr>
-        <h4 class="is-size-4 has-text-weight-bold">
-            A pharmacist can help if you have a cough:
-        </h4>
-
-        <br>
-        <p>If you have a cough, you can ask a pharmacist about:</p>
-        <br>
-        <div class="content">
-            <ul>
-                <li>cough syrup</li>
-                <li>cough medicine (some cough medicines should not be given to children under 12 years old)</li>
-                <li>cough sweets</li>
-            </ul>
-        </div>
-        <p>
-            These will not stop your cough, but may help you cough less.
-        </p>
-        <br>
-        <p>
-            Decongestants and cough medicines containing codeine will not stop your cough.
-        </p>
-        <hr>
-
-        <div class="container2">
-            <h4 class="is-size-4 has-text-weight-bold has-text-primary">
-                See a GP if:
-            </h4>
-            <br>
-            <div class="content">
-                <ul>
-                    <li>you've had a cough for more than 3 weeks (persistent cough)</li>
-                    <li>you're losing weight for no reason</li>
-                    <li>you have a weakened immune system – for example, because of chemotherapy or diabetes</li>
-                </ul>
-            </div>
-        </div>
-
-        <hr>
-        <div class="container3">
-            <h4 class="is-size-4 has-text-weight-bold has-text-danger">
-                Ask for an urgent GP appointment or get help from NHS 111 if:
-            </h4>
-            <br>
-            <div class="content">
-                <ul>
-                    <li>your cough is very bad or quickly gets worse – for example, you have a hacking cough or cannot stop coughing</li>
-                    <li>you feel very unwell</li>
-                    <li>you have chest pain</li>
-                    <li>the side of your neck feels swollen and painful (swollen glands)</li>
-                    <li>you find it hard to breathe</li>
-                    <li>you're coughing up blood</li>
-                </ul>
-            </div>
-            <p>You can call 111 or get help from 111 online.</p>
-        </div>
-        <hr>
-
-        <h4 class="is-size-4 has-text-weight-bold">
-            What happens at your appointment
-        </h4>
-        <br>
-        <p>
-            To find out what's causing your cough, the GP might:
-        </p>
-        <br>
-        <div class="content">
-            <ul>
-                <li>listen to your chest with a stethoscope</li>
-                <li>take a sample of any mucus you might be coughing up</li>
-                <li>order an X-ray, allergy test, or a test to see how well your lungs work</li>
-                <li>refer you to hospital to see a specialist, but this is rare</li>
-            </ul>
-        </div>
-
-        <h4 class="is-size-4 has-text-warning has-text-weight-bold">
-            Important:
-        </h4>
-        <br>
-        <p>
-            Antibiotics are not normally prescribed for coughs. A GP will only prescribe them if you need them – for example, if you have a bacterial infection or you're at risk of complications.
-        </p>
-
-        <hr>
-        <h4 class="is-size-4 has-text-weight-bold">
-            What causes coughs:
-        </h4>
-        <p>
-            Most coughs are caused by a cold or flu.<br><br>
-            Other causes include:
-        </p>
-        <br>
-        <div class="content">
-            <ul>
-                <li>smoking</li>
-                <li>heartburn (acid reflux)</li>
-                <li>allergies - for example, hay fever</li>
-                <li>infections like bronchitis or COVID-19</li>
-                <li>mucus dripping down the throat from the back of the nose</li>
-            </ul>
-        </div>
-        <br>
-        <p>
-            A cough is rarely a sign of something serious like lung cancer.
-        </p>
-
-        <hr>
-        <h2 class="is-size-3 has-text-weight-bold">Find more about other problems:</h2>
-        <br>
-        <p>
-            Please select one of the following health problems to find the cause, your remedy, and possible preventions to
-            your problem/s:
-        </p>
-        <br>
-        <br>
-        <div class="fixed-grid">
-            <div class="grid">
-                 {% for illness in illnesses %}
-                    <a class="cell1 notification is-link has-text-centered is-size-5" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
-                 {% endfor %}
-                <br>
-            </div>
-
-            <div class="columns is-centered">
-                <div class="column is-full">
-                    <a class="button is-size-4 is-primary has-text-white is-fullwidth" href="{% url 'home' %}">Back Home</a>
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{% url 'home' %}">
+                <h1 class="is-size-5 has-text-left has-text-weight-bold title-white"><u>Find Your Remedy</u></h1>
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Problems
+                </a>
+                <div class="navbar-dropdown">
+                    {% for illness in illnesses %}
+                    <a class="navbar-item" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
+</nav>
+
+<div class="container">
+    <div class="notification is-primary" style="margin-top: 3.25rem;">
+        <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
+    </div>
+    <h2 class="is-size-3 has-text-weight-bold"><u>Coughs</u></h2>
+    <br>
+    <p>
+        A cough is a common reflex action that can clear the throat of any mucus or foreign irritants.
+        while it can be bothersome and annoying, it serves a protective function by helping to keep your throat and
+        air ways clear.
+    </p>
+
+    <hr>
+    <figure class="image is-1080x1080">
+        <img src="{% static '/images/Cough.png' %}" alt="coughing image"/>
+    </figure>
+    <hr>
+
+    <p>
+        A cough will most likely clear up on its own within 3 to 4 weeks.
+    </p>
+    <br>
+    <h4 class="is-size-4 has-text-weight-bold">
+        How you can treat a cough yourself:
+    </h4>
+    <br>
+    <p>
+        There's usually no need to see a GP if you have a cough.
+        <br><br>
+        You should:
+        <br>
+    </p>
+    <div class="content">
+        <ul>
+            <li>rest</li>
+            <li>drink plenty of fluids (water)</li>
+            <li>try ro stay indoors and avoid contact with others if you have a high temperature, or you do not feel
+                well enough to do your normal activities
+            </li>
+        </ul>
+    </div>
+
+    <p>
+        You should also try remedies such as:
+    </p>
+    <div class="content">
+        <ul>
+            <li>paracetamol or ibuprofen to treat any pain or discomfort</li>
+            <li>hot lemon and honey (not suitable for babies under 1-year-old)</li>
+            <li>a herbal medicine called pelargonium (suitable for aged 12 or over)</li>
+        </ul>
+    </div>
+    <p>
+        But there's limited evidence to show these work. Hot lemon with honey has a similar effect to cough medicines.
+    </p>
+
+    <hr>
+    <div class="dropdown is-hoverable">
+        <div class="dropdown-trigger">
+            <button class="button has-text-weight-bold" aria-haspopup="true" aria-controls="dropdown-menu3">
+                <span>How to make a hot lemon and honey drink</span>
+                <span class="icon is-small">
+                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+            </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+            <div class="dropdown-content">
+                <div class="dropdown-item">
+                    <div class="content">
+                        <ol>
+                            <li>Squeeze half a lemon into a mug of boiled water.</li>
+                            <li>Add 1 to 2 teaspoons of honey.</li>
+                            <li>Drink while still warm (do not give hot drinks to small children).</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="container1">
+        <div class="flex-container">
+            <div class="rectangle"></div>
+            <p>Some medicines and herbal treatments are not safe for everyone (for example, if you're pregnant).
+                Always check with leaflet or speak to a pharmacist before taking them.</p>
+        </div>
+    </div>
+    <hr>
+    <h4 class="is-size-4 has-text-weight-bold">
+        A pharmacist can help if you have a cough:
+    </h4>
+
+    <br>
+    <p>If you have a cough, you can ask a pharmacist about:</p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>cough syrup</li>
+            <li>cough medicine (some cough medicines should not be given to children under 12 years old)</li>
+            <li>cough sweets</li>
+        </ul>
+    </div>
+    <p>
+        These will not stop your cough, but may help you cough less.
+    </p>
+    <br>
+    <p>
+        Decongestants and cough medicines containing codeine will not stop your cough.
+    </p>
+    <hr>
+
+    <div class="container2">
+        <h4 class="is-size-4 has-text-weight-bold has-text-primary">
+            See a GP if:
+        </h4>
+        <br>
+        <div class="content">
+            <ul>
+                <li>you've had a cough for more than 3 weeks (persistent cough)</li>
+                <li>you're losing weight for no reason</li>
+                <li>you have a weakened immune system – for example, because of chemotherapy or diabetes</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+    <div class="container3">
+        <h4 class="is-size-4 has-text-weight-bold has-text-danger">
+            Ask for an urgent GP appointment or get help from NHS 111 if:
+        </h4>
+        <br>
+        <div class="content">
+            <ul>
+                <li>your cough is very bad or quickly gets worse – for example, you have a hacking cough or cannot stop
+                    coughing
+                </li>
+                <li>you feel very unwell</li>
+                <li>you have chest pain</li>
+                <li>the side of your neck feels swollen and painful (swollen glands)</li>
+                <li>you find it hard to breathe</li>
+                <li>you're coughing up blood</li>
+            </ul>
+        </div>
+        <p>You can call 111 or get help from 111 online.</p>
+    </div>
+    <hr>
+
+    <h4 class="is-size-4 has-text-weight-bold">
+        What happens at your appointment
+    </h4>
+    <br>
+    <p>
+        To find out what's causing your cough, the GP might:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>listen to your chest with a stethoscope</li>
+            <li>take a sample of any mucus you might be coughing up</li>
+            <li>order an X-ray, allergy test, or a test to see how well your lungs work</li>
+            <li>refer you to hospital to see a specialist, but this is rare</li>
+        </ul>
+    </div>
+
+    <h4 class="is-size-4 has-text-warning has-text-weight-bold">
+        Important:
+    </h4>
+    <br>
+    <p>
+        Antibiotics are not normally prescribed for coughs. A GP will only prescribe them if you need them – for
+        example, if you have a bacterial infection or you're at risk of complications.
+    </p>
+
+    <hr>
+    <h4 class="is-size-4 has-text-weight-bold">
+        What causes coughs:
+    </h4>
+    <p>
+        Most coughs are caused by a cold or flu.<br><br>
+        Other causes include:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>smoking</li>
+            <li>heartburn (acid reflux)</li>
+            <li>allergies - for example, hay fever</li>
+            <li>infections like bronchitis or COVID-19</li>
+            <li>mucus dripping down the throat from the back of the nose</li>
+        </ul>
+    </div>
+    <br>
+    <p>
+        A cough is rarely a sign of something serious like lung cancer.
+    </p>
+
+    <hr>
+    <h2 class="is-size-3 has-text-weight-bold">Find more about other problems:</h2>
+    <br>
+    <p>
+        Please select one of the following health problems to find the cause, your remedy, and possible preventions to
+        your problem/s:
+    </p>
+    <br>
+    <br>
+    <div class="fixed-grid">
+        <div class="grid">
+            {% for illness in illnesses %}
+            <a class="cell1 notification is-link has-text-centered is-size-5"
+               href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
+            {% endfor %}
+            <br>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column is-full">
+                <a class="button is-size-4 is-primary has-text-white is-fullwidth" href="{% url 'home' %}">Back Home</a>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

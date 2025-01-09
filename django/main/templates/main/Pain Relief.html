@@ -7,93 +7,386 @@
     <link rel="stylesheet" href="{% static 'Style.css' %}">
 </head>
 <body>
-     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="{% url 'home' %}">
-                    <h1 class="is-size-5 has-text-left has-text-weight-bold title-white"><u>Find Your Remedy</u></h1>
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Problems
-                    </a>
-                    <div class="navbar-dropdown">
-                        {% for illness in illnesses %}
-                        <a class="navbar-item" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
-        <div class="notification is-primary" style="margin-top: 3.25rem;">
-            <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
-        </div>
-        <h2 class="is-size-3 has-text-weight-bold">
-            <u>Pain Relief</u>
-        </h2>
-        <br>
-        <p>
-            Exercise and continuing to work if you can are key to managing persistent pain, also known as chronic pain, to help lead a fuller life.
-        </p>
-        <hr>
-        <figure class="image is-1080x1080">
-            <img class="image-border" src="{% static '/images/pain.jpg' %}" alt="pain relief image"/>
-        </figure>
-        <hr>
-        <p>
-            Lying in bed for long periods can make back pain last longer. Lack of activity can make:
-        </p>
-        <br>
-        <div class="content">
-            <ul>
-                <li>You stiffen up</li>
-                <li>Your muscles and bones become weaker</li>
-                <li>You sleep less well</li>
-                <li>You become lonely and depressed</li>
-                <li>Pain feels worse</li>
-            </ul>
-        </div>
-        <br>
-        <p>
-            You may also find it becomes harder to get going again.
-        </p>
-        <br>
-        <p>
-            A better approach to reducing pain is a combination of:
-        </p>
-        <br>
-        <div class="content">
-            <li>exercise</li>
-            <li>staying at work</li>
-            <li>physical therapy</li>
-            <li>painkillers</li>
-        </div>
-        <hr>
-        <h2 class="is-size-3 has-text-weight-bold">Find more about other problems:</h2>
-        <br>
-        <p>
-            Please select one of the following health problems to find the cause, your remedy, and possible preventions to
-            your problem/s:
-        </p>
-        <br>
-        <br>
-        <div class="fixed-grid">
-            <div class="grid">
-                 {% for illness in illnesses %}
-                    <a class="cell1 notification is-link has-text-centered is-size-5" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
-                 {% endfor %}
-                <br>
-            </div>
-
-            <div class="columns is-centered">
-                <div class="column is-full">
-                    <a class="button is-size-4 is-primary has-text-white is-fullwidth" href="{% url 'home' %}">Back Home</a>
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{% url 'home' %}">
+                <h1 class="is-size-5 has-text-left has-text-weight-bold title-white"><u>Find Your Remedy</u></h1>
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Problems
+                </a>
+                <div class="navbar-dropdown">
+                    {% for illness in illnesses %}
+                    <a class="navbar-item" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
+</nav>
+
+<div class="container">
+    <div class="notification is-primary" style="margin-top: 3.25rem;">
+        <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
+    </div>
+    <h2 class="is-size-3 has-text-weight-bold">
+        <u>Pain Relief</u>
+    </h2>
+    <br>
+    <p>
+        Pain is a very common condition. The occurrence of pain rises as people get older, and women are more likely to
+        experience pain than men.
+    </p>
+    <hr>
+    <figure class="image is-1080x1080">
+        <img class="image-border" src="{% static '/images/pain.jpg' %}" alt="pain relief image"/>
+    </figure>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold">
+        Types of pain
+    </h3>
+    <br>
+    <p>
+        There are 2 main types of pain:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>Acute pain – a normal response to an injury or medical condition. It starts suddenly and is usually
+                short-lived.
+            </li>
+            <li>Chronic pain – continues beyond the time expected for healing. It generally lasts for longer than 3
+                months.
+            </li>
+        </ul>
+    </div>
+    <br>
+    <p>
+        Pain may be anything from a dull ache to a sharp stab and can range from mild to extreme. You may feel pain in
+        one part of your body, or it may be widespread.
+    </p>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold has-text-primary">
+        Pain management strategies
+    </h3>
+    <br>
+    <p>
+        Studies suggest that a person’s emotional wellbeing can impact the experience of pain. Understanding the cause
+        and learning effective ways to cope with your pain can improve your quality of life. Key pain management
+        strategies include:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>Pain medicines</li>
+            <li>Physical therapies (such as heat or cold packs, massage, hydrotherapy, and exercise)</li>
+            <li>Psychological therapies (such as cognitive behavioural therapy, relaxation techniques, and
+                meditation)
+            </li>
+            <li>Mind and body techniques (such as acupuncture)</li>
+            <li>Community support groups</li>
+        </ul>
+    </div>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold">
+        Causes of pain
+    </h3>
+    <br>
+    <p>
+        The most common causes of pain in adults include:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>injury</li>
+            <li>medical conditions (such as cancer, arthritis and back problems)</li>
+            <li>surgery</li>
+        </ul>
+    </div>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold">
+        How pain affects the body
+    </h3>
+    <br>
+    <p>
+        Pain is a complex protective mechanism. It is an essential part of evolution that protects the body from danger
+        and harm.
+    </p>
+    <br>
+    <p>
+        The body has pain receptors that are attached to 2 main types of nerves that detect danger. One nerve type
+        relays messages quickly, causing a sharp, sudden pain. The other relays messages slowly, causing a dull,
+        throbbing pain.
+    </p>
+    <br>
+    <p>
+        Some areas of the body have more pain receptors than others. For example, the skin has lots of receptors so it
+        is easy to tell the exact location and type of pain. There are far fewer receptors in the gut, so it is harder
+        to pinpoint the precise location of a stomach ache.
+    </p>
+    <br>
+    <p>
+        If pain receptors in the skin are activated by touching something dangerous (for example something hot or
+        sharp), these nerves send alerts to the spinal cord and then to part of the brain called the thalamus.
+    </p>
+    <br>
+    <p>
+        Sometimes the spinal cord sends an immediate signal back to the muscles to make them contract. This moves the
+        affected body part away from the source of danger or harm.
+    </p>
+    <br>
+    <p>
+        This is a reflex reaction that prevents further damage occurring. It happens before you feel pain.
+    </p>
+    <br>
+    <p>
+        Once the ‘alert!’ message reaches the thalamus, it sorts the information the nerves have sent, taking into
+        account your previous experience, beliefs, expectations, culture and social norms. This explains why people have
+        very different responses to pain.
+    </p>
+    <br>
+    <p>
+        The thalamus then sends the information on to other parts of the brain that are linked to physical response,
+        thought and emotion. This is when you may feel the sensation of pain, think ‘That hurt! What was it?’, and feel
+        annoyed.
+    </p>
+    <br>
+    <p>
+        The thalamus also contributes to mood and arousal, which helps to explain why your interpretation of pain partly
+        depends on your state of mind.
+    </p>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold has-text-info">
+        Managing pain without medicines
+    </h3>
+    <br>
+    <p>
+        Always follow instructions for taking your medicines safely and effectively. By doing so:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>your pain is more likely to be well managed</li>
+            <li>you are less likely to need larger doses of medicine</li>
+            <li>you can reduce your risk of side effects.</li>
+        </ul>
+    </div>
+    <br>
+    <p>
+        Medicines for chronic pain are best taken regularly. Talk to your doctor or pharmacist if your medicines are not
+        working or are causing problems, such as side effects. These are more likely to occur if you are taking pain
+        medicines for a long time.
+    </p>
+    <br>
+    <p>
+        It is important to use a variety of strategies to help reduce pain. Do not rely on medicines alone. People can
+        lower the levels of pain they feel by:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>staying active</li>
+            <li>pacing their daily activity to avoid pain flares (this involves finding the balance between under- and
+                over-doing it)
+            </li>
+            <li>avoiding pain triggers</li>
+            <li>using coping strategies.</li>
+        </ul>
+    </div>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold has-text-warning">
+        Side effects of pain medicines
+    </h3>
+    <br>
+    <p>
+        Some of the side effects of common pain medicines include:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>
+                <b>Paracetamol</b>
+                <ul>
+                    <li>Side effects are rare when taken at the recommended dose and for a short time.</li>
+                    <li>Can cause skin rash and liver damage if used in large doses for a long time.</li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>Aspirin</b>
+                <ul>
+                    <li>Common side effects: nausea, vomiting, indigestion, and stomach ulcer.</li>
+                    <li>Serious side effects: asthma attack, tinnitus (ringing in the ears), kidney damage, and
+                        bleeding.
+                    </li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>Non-steroidal anti-inflammatory drugs (NSAIDs)</b>
+                <ul>
+                    <li>Common side effects: headache, nausea, stomach upset, heartburn, skin rash, tiredness,
+                        dizziness, and ringing in the ears.
+                    </li>
+                    <li>Can cause raised blood pressure, worsen heart failure or kidney failure, and increase the
+                        risk of heart attack, angina, stroke, and bleeding.
+                    </li>
+                    <li>Should always be used cautiously and for the shortest time possible.</li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                <b>Opioid pain medicines (e.g., morphine, oxycodone, codeine)</b>
+                <ul>
+                    <li>Common side effects: drowsiness, confusion, falls, nausea, vomiting, and constipation.</li>
+                    <li>Can reduce physical coordination and balance.</li>
+                    <li>Can lead to dependence and slow down breathing, resulting in accidental fatal overdose.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <p>
+        You can find a more complete list of side effects in a Consumer Medicine Information leaflet. Talk to your
+        doctor or pharmacist before taking any pain medicine to ensure it is safe for you.
+    </p>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold has-text-warning">
+        Precautions when taking pain medicines
+    </h3>
+    <br>
+    <p>
+        Treat over-the-counter pain medicines with caution, just like any other medicines. It’s always good to discuss
+        any medicines with your doctor or pharmacist.
+    </p>
+    <br>
+    <p>
+        General suggestions include:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>Don’t self-medicate with pain medicines during pregnancy – some can reach the fetus through the
+                placenta and potentially cause harm.
+            </li>
+            <li>
+                Take care if you are elderly or caring for an older person.
+                <ul>
+                    <li>Older people have an increased risk of side effects.</li>
+                    <li>For example, taking aspirin regularly for chronic pain (such as arthritis) can cause a
+                        dangerous bleeding stomach ulcer.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                When buying over-the-counter pain medicines:
+                <ul>
+                    <li>Speak with a pharmacist about any prescription and complementary medicines you are taking so
+                        they can help you choose a pain medicine that is safe for you.
+                    </li>
+                    <li>Don’t take more than one over-the-counter medicine at a time without consulting your doctor
+                        or pharmacist. It is easier than you think to unintentionally take an overdose. For example,
+                        many ‘cold and flu’ medicines contain paracetamol, so it is important not to take any other
+                        paracetamol-containing medicine at the same time.
+                    </li>
+                </ul>
+            </li>
+            <li>See your doctor or healthcare professional for proper treatment for sport injuries.</li>
+            <li>Don’t use pain medicines to ‘tough it out’.</li>
+            <li>Consult your doctor or pharmacist before using any over-the-counter medicine if you have a chronic
+                (ongoing) physical condition, such as heart disease or diabetes.
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold">
+        Managing pain that cannot be easily relieved
+    </h3>
+    <br>
+    <p>
+        Sometimes pain will persist and cannot be easily relieved. It’s natural to feel worried, sad or fearful when you
+        are in pain. Here are some suggestions for how to handle persistent pain:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>Focus on improving your day-to-day function, rather than completely stopping the pain.</li>
+            <li>Accept that your pain may not go away and that flare-ups may occur. Talk yourself through these
+                times.
+            </li>
+            <li>Find out as much as you can about your condition so that you don't fret or worry unnecessarily about
+                the pain.
+            </li>
+            <li>
+                Enlist the support of family and friends.
+                <ul>
+                    <li>Let them know what support you need.</li>
+                    <li>Find ways to stay in touch.</li>
+                </ul>
+            </li>
+            <li>Take steps to prevent or ease depression by any means that work for you, including talking to
+                friends or professionals.
+            </li>
+            <li>Don’t increase your pain medicines without talking to your doctor or pharmacist first.</li>
+            <li>Increasing your dose may not help your pain and might cause you harm.</li>
+            <li>Improve your physical fitness, eat healthy foods and make sure you get all the rest you need.</li>
+            <li>
+                Try not to allow the pain to stop you living your life the way you want to.
+                <ul>
+                    <li>Try gently reintroducing activities that you used to enjoy.</li>
+                    <li>You may need to cut back on some activities if pain flare-ups occur, but increase slowly
+                        again as you did before.
+                    </li>
+                </ul>
+            </li>
+            <li>Concentrate on finding fun and rewarding activities that don't make your pain worse.</li>
+            <li>Seek advice on new coping strategies and skills from a healthcare professional such as a
+                psychologist.
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold has-text-info">
+        Where to get help
+    </h3>
+    <br>
+    <div class="content">
+        <ul>
+            <li>Your GP (doctor)</li>
+            <li>Pharmacist</li>
+            <li>NURSE-ON-CALL Tel. 1300 60 60 24 – for expert health information and advice (24 hours, 7 days)</li>
+            <li>Physiotherapist</li>
+            <li>Occupational therapist</li>
+            <li>Counsellor</li>
+            <li>Psychologist</li>
+        </ul>
+    </div>
+    <hr>
+    <h2 class="is-size-3 has-text-weight-bold">Find more about other problems:</h2>
+    <br>
+    <p>
+        Please select one of the following health problems to find the cause, your remedy, and possible preventions to
+        your problem/s:
+    </p>
+    <br>
+    <br>
+    <div class="fixed-grid">
+        <div class="grid">
+            {% for illness in illnesses %}
+            <a class="cell1 notification is-link has-text-centered is-size-5"
+               href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
+            {% endfor %}
+            <br>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column is-full">
+                <a class="button is-size-4 is-primary has-text-white is-fullwidth" href="{% url 'home' %}">Back Home</a>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -23,8 +23,13 @@ https://www.rennie.co.uk/product-range/rennie-peppermint
 
 https://www.mypharmacy.co.uk/product/gaviscon-advance-peppermint-suspension-300ml/
 
+
 # Information:
 https://www.nhs.uk/
+
+https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/pain-and-pain-management-adults
+
+
 # Toolkit used:
 https://www.bulma.io/ 
 

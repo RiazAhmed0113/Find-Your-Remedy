@@ -7,69 +7,244 @@
     <link rel="stylesheet" href="{% static 'Style.css' %}">
 </head>
 <body>
-     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="{% url 'home' %}">
-                    <h1 class="is-size-5 has-text-left has-text-weight-bold title-white"><u>Find Your Remedy</u></h1>
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Problems
-                    </a>
-                    <div class="navbar-dropdown">
-                        {% for illness in illnesses %}
-                        <a class="navbar-item" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="container">
-        <div class="notification is-primary" style="margin-top: 3.25rem;">
-            <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
-        </div>
-        <h2 class="is-size-3 has-text-weight-bold">Physical Injury</h2>
-        <p>
-            A page dedicated into providing basic, general information about how to find the solution to your health
-            problem/s.
-        </p>
-        <br>
-        <p>(place holder text;)Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consectetur,
-            delectus est ex iure libero natus, nihil odio repellendus tempore tenetur! Aliquid amet ea numquam placeat, quo
-            sequi vitae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam beatae debitis ipsa labore
-            maiores minima minus, molestias, nisi nostrum numquam obcaecati pariatur quia quibusdam quos rerum sed sint
-            tempore voluptate.</p>
-        <br>
-        <br>
-        <figure class="image is-1080x1080">
-            <img class="is-rounded image-border" src="{% static '/images/injury.jpg' %}" alt="injury x-ray image"/>
-        </figure>
-        <br>
-        <h2 class="is-size-3 has-text-weight-bold">Find more about other problems:</h2>
-        <br>
-        <p>
-            Please select one of the following health problems to find the cause, your remedy, and possible preventions to
-            your problem/s:
-        </p>
-        <br>
-        <br>
-        <div class="fixed-grid">
-            <div class="grid">
-                 {% for illness in illnesses %}
-                    <a class="cell1 notification is-link has-text-centered is-size-5" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
-                 {% endfor %}
-                <br>
-            </div>
-
-            <div class="columns is-centered">
-                <div class="column is-full">
-                    <a class="button is-size-4 is-primary has-text-white is-fullwidth" href="{% url 'home' %}">Back Home</a>
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{% url 'home' %}">
+                <h1 class="is-size-5 has-text-left has-text-weight-bold title-white"><u>Find Your Remedy</u></h1>
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    Problems
+                </a>
+                <div class="navbar-dropdown">
+                    {% for illness in illnesses %}
+                    <a class="navbar-item" href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
+</nav>
+
+<div class="container">
+    <div class="notification is-primary" style="margin-top: 3.25rem;">
+        <h1 class="is-size-1 has-text-centered has-text-weight-bold"><u>Find Your Remedy</u></h1>
+    </div>
+    <h2 class="is-size-3 has-text-weight-bold"><u>Physical Injury</u></h2>
+    <br>
+    <p>
+        Physical injuries are commonly caused by overuse, direct impact, or the application of force that is greater
+        than the body part can structurally withstand. There are two kinds of physical injuries: acute and chronic. An
+        injury that occurs suddenly, such as a sprained ankle caused by an awkward landing, is known as an acute injury.
+    </p>
+    <br>
+    <p>
+        Chronic injuries are caused by repeated overuse of muscle groups or joints. Poor technique and structural
+        abnormalities can also contribute to the development of chronic injuries. Medical investigation of any physical
+        injury is important, because you may be hurt more severely than you think. For example, what seems like an ankle
+        sprain may actually be a bone fracture.
+    </p>
+    <hr>
+    <figure class="image is-1080x1080">
+        <img class="is-rounded image-border" src="{% static '/images/injury.jpg' %}" alt="injury x-ray image"/>
+    </figure>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold">
+        Types of physical injuries
+    </h3>
+    <br>
+    <p>
+        Some of the more common physical injuries include:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>Ankle sprain – symptoms include pain, swelling, and stiffness.</li>
+            <li>Bruises – a blow can cause small bleeds into the skin.</li>
+            <li>Concussion – mild reversible brain injury from a blow to the head, which may be associated with loss
+                of consciousness. Symptoms include headache, dizziness, and short-term memory loss.
+            </li>
+            <li>Cuts and abrasions – are usually caused by falls. The knees and hands are particularly prone.</li>
+            <li>Dehydration – losing too much fluid can lead to heat exhaustion and heat stroke.</li>
+            <li>Dental damage – a blow to the jaw can crack, break, or dislodge teeth.</li>
+            <li>Groin strain – symptoms include pain and swelling.</li>
+            <li>Hamstring strain – symptoms include pain, swelling, and bruising.</li>
+            <li>Knee joint injuries – symptoms include pain, swelling, and stiffness. The ligaments, tendons, or
+                cartilage can be affected.
+            </li>
+            <li>Nose injuries – either blood nose or broken nose, are caused by a direct blow.</li>
+            <li>Stress fractures – particularly in the lower limbs. The impact of repeated jumping or running on
+                hard surfaces can eventually stress and crack bone.
+            </li>
+        </ul>
+    </div>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold has-text-info">
+        First aid for sprains, strains and joint injuries
+    </h3>
+    <br>
+    <p>
+        Suggestions on immediate treatment for sprains, strains and joint injuries, to prevent further damage include:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li><strong>Rest</strong> – keep the injured area supported and avoid using it for 48-72 hours.</li>
+            <li><strong>Ice</strong> – apply ice to the injured area for 20 minutes every two hours for the first
+                48-72 hours.
+            </li>
+            <li><strong>Compression</strong> – apply a firm elastic bandage over the area, extending above and below
+                the painful site.
+            </li>
+            <li><strong>Elevation</strong> – raise the injured area above the level of the heart at all times.</li>
+            <li><strong>Referral</strong> – as soon as possible, see a doctor.</li>
+            <li><strong>No Heat</strong> – heat will increase bleeding.</li>
+            <li><strong>No Alcohol</strong> – alcohol increases bleeding and swelling.</li>
+            <li><strong>No Running</strong> – running or exercise increases blood flow, delaying healing.</li>
+            <li><strong>No Massage</strong> – massage increases swelling and bleeding, also delaying healing.</li>
+        </ul>
+    </div>
+    <br>
+    <h3 class="is-size-3 has-text-weight-bold has-text-info">
+        First aid for nose bleeds
+    </h3>
+    <br>
+    <p>
+        Suggestions include:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>Stop the activity.</li>
+            <li>Sit with your head leaning forward.</li>
+            <li>Pinch your nostrils together and breathe through your mouth.</li>
+            <li>Hold your nose for at least 10 minutes.</li>
+            <li>If bleeding continues past 30 minutes, seek medical advice.</li>
+        </ul>
+    </div>
+    <br>
+    <h3 class="is-size-3 has-text-weight-bold has-text-info">
+        First aid for dislodged teeth
+    </h3>
+    <br>
+    <p>
+        It may be possible to save a tooth that has been knocked out with prompt dental treatment. Rinse the tooth in
+        water or milk, and see your dentist immediately.
+    </p>
+    <br>
+    <h3 class="is-size-3 has-text-weight-bold has-text-danger">
+        Emergency situations
+    </h3>
+    <br>
+    <p>
+        Call an ambulance for:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>Prolonged loss of consciousness</li>
+            <li>Neck or spine injuries</li>
+            <li>Broken bones</li>
+            <li>Injuries to the head or face</li>
+            <li>Eye injuries</li>
+            <li>Abdominal injuries</li>
+        </ul>
+    </div>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold has-text-primary">
+        Treatment for sports injuries
+    </h3>
+    <br>
+    <p>
+        Treatment depends on the type and severity of the injury. Always see your doctor if pain persists after a couple
+        of days. What you may think is a straightforward sprain may actually be a fractured bone.
+    </p>
+    <br>
+    <p>
+        Physiotherapy can help to rehabilitate the injured site and, depending on the injury, may include exercises to
+        promote strength and flexibility. Returning to sport after injury depends on your doctor’s or physiotherapist’s
+        assessment.
+    </p>
+    <br>
+    <p>
+        Trying to play before the injury is properly healed will only cause further damage and delay recovery. The
+        biggest single risk factor for soft tissue injury is a previous injury. While the injury heals, you can maintain
+        your fitness by choosing forms of exercise that don’t involve that part of your body, if possible.
+    </p>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold has-text-primary">
+        Prevention of sports injuries
+    </h3>
+    <br>
+    <p>
+        You can reduce your risk of sports injuries if you:
+    </p>
+    <br>
+    <div class="content">
+        <ul>
+            <li>Warm up thoroughly by gently going through the motions of your sport and performing slow, sustained
+                stretches.
+            </li>
+            <li>Wear appropriate footwear.</li>
+            <li>Tape or strap vulnerable joints, if necessary.</li>
+            <li>Use the appropriate safety equipment, such as mouth guards, helmets, and pads.</li>
+            <li>Drink plenty of fluids before, during, and after the game.</li>
+            <li>Try to avoid exercising in the hottest part of the day, between 11 am and 3 pm.</li>
+            <li>Maintain a good level of overall fitness, particularly in the off season (in the months between
+                playing seasons for a sport).
+            </li>
+            <li>Cross-train with other sports to ensure overall fitness and muscle strength.</li>
+            <li>Ensure training includes appropriate speed and impact work so muscles are capable of the demands of
+                a game situation.
+            </li>
+            <li>Don’t exert yourself beyond your level of fitness. Gradually increase intensity and duration of
+                training.
+            </li>
+            <li>Use good form and technique.</li>
+            <li>Cool down after sport with gentle, sustained stretches.</li>
+            <li>Allow adequate recovery time between sessions.</li>
+            <li>Have regular medical check-ups.</li>
+        </ul>
+    </div>
+    <hr>
+    <h3 class="is-size-3 has-text-weight-bold">
+        Where to get help
+    </h3>
+    <br>
+    <div class="content">
+        <ul>
+            <li>In an emergency, always call 000 for an ambulance</li>
+            <li>Your GP (doctor)</li>
+            <li>Sports medicine clinic</li>
+            <li>Physiotherapist</li>
+            <li>Hospital emergency department</li>
+        </ul>
+    </div>
+    <hr>
+    <h2 class="is-size-3 has-text-weight-bold">Find more about other problems:</h2>
+    <br>
+    <p>
+        Please select one of the following health problems to find the cause, your remedy, and possible preventions to
+        your problem/s:
+    </p>
+    <br>
+    <br>
+    <div class="fixed-grid">
+        <div class="grid">
+            {% for illness in illnesses %}
+            <a class="cell1 notification is-link has-text-centered is-size-5"
+               href="{% url 'illness_view' illness.name %}">{{ illness.name }}</a>
+            {% endfor %}
+            <br>
+        </div>
+
+        <div class="columns is-centered">
+            <div class="column is-full">
+                <a class="button is-size-4 is-primary has-text-white is-fullwidth" href="{% url 'home' %}">Back Home</a>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
