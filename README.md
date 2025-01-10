@@ -23,7 +23,17 @@ https://www.rennie.co.uk/product-range/rennie-peppermint
 
 https://www.mypharmacy.co.uk/product/gaviscon-advance-peppermint-suspension-300ml/
 
+https://www.mypharmacy.co.uk/product/robitussin-mucus-cough/
 
+https://www.amazon.co.uk/Soothers-Flavour-Strawberry-Raspberry-Blackcurrant/dp/B0CNRV2DJY
+
+https://www.travelpharm.com/medications/paracetamol-500mg-capsules-32
+
+https://www.aspirin.ca/en/products/aspirin-extra-strength/
+
+https://healthify.nz/medicines-a-z/n/non-steroidal-anti-inflammatories-nsaids/
+
+https://www.pharmacyonline.co.uk/medications/codeine-linctus/
 # Information:
 https://www.nhs.uk/
 
